@@ -1,28 +1,39 @@
 <?php
-$radius = 25;
-$pi = 3.14;
-$age = 20;
 
-//echo $pi * $radius**2
+// indexed arrays
+$peopleOne = ['shaun', 'crystal', 'ryu'];
+//echo $peopleOne[1];
 
-// order of operation (B I D M A S)
+$peopleTwo = array('ken', 'chun-li'); // different method to declare indexed array
+//echo $peopleTwo[1];
 
-//echo 2 * +(4 + 9) / 3;
+$ages = [20, 30, 40, 50];
+//echo $ages; // not working, because try to transform into string an array
 
-// increment and decrement operators
+$ages[1] = 25;
+$ages[] = 60; // this will add a new element to the array (we have not passed an index)
+array_push($ages, 70); // another method to push element inside an array
+//echo count($ages); // counts the length of an array
 
-//echo $radius++;
-//echo $radius;
+$peopleThree = array_merge($peopleOne, $peopleTwo);
+//print_r($peopleThree);
 
-//$age += 10;
-//$age -= 10;
-//$age *= 2;
-//echo $age
+// associative arrays - (key, value)
+$ninjasOne = ['shaun' => 'black', 'mario' => 'orange', 'luigi' => 'brown']; // ninja name and relative belt
+//echo $ninjasOne['mario'];
+//print_r($ninjasOne);
 
-// number
-//echo floor($pi);
-//echo ceil($pi);
-echo pi();
+$ninjasTwo = array('bowser' => 'green', 'peach' => 'yellow');
+//print_r($ninjasTwo);
+
+$ninjasTwo['toad'] = 'pink'; // add new value to associative array
+$ninjasTwo['peach'] = 'pink'; // override element inside associative arrays
+//print_r($ninjasTwo);
+
+//echo count($ninjasTwo);
+
+$ninjasThree = array_merge($ninjasOne, $ninjasTwo);
+print_r($ninjasThree);
 
 ?>
 
