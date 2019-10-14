@@ -3,11 +3,10 @@
 ?>
 
 <!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+<html lang="en">
 
-</body>
+<?php include ('templates/header.php'); ?>
+
+<?php include ('templates/footer.php'); ?>
+
 </html>
